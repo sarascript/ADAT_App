@@ -1,0 +1,36 @@
+1
+Mochi
+Común europeo
+Leopardoso
+######
+
+2
+Hamtaro
+Semipersa
+Naranja y blanco
+######
+
+3
+Mew
+Común europeo
+Gris
+######
+
+4
+Cocoa
+Persa
+Himalayo
+######
+
+5
+Taco
+Común europeo
+Negro
+######
+
+6
+King
+Persa
+Negro
+######
+
