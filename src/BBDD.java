@@ -1,6 +1,8 @@
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class BBDD implements AccesoDatos {
@@ -13,6 +15,18 @@ public class BBDD implements AccesoDatos {
 		cadSQL = "INSERT INTO gatos VALUES (" + lista.get("ID") + ", '" + lista.get("Nombre") + "', '" + lista.get("Raza") + "', '" + lista.get("Color") + "')";
 		r = miConexion.stmt.executeUpdate(cadSQL);
 		System.out.println(r + " registro agregado.");
+	}
+	
+	public void escribirTodos(Map<String, String> lista) throws SQLException {
+		for (int i = 0; i < lista.size(); i++) {
+			Iterator<Entry<String,String>> it = lista.entrySet().iterator();
+			while (it.hasNext()) {
+			  Entry<String,String> e = it.next();
+			  Map<String, String> utilMap = new HashMap();
+			  utilMap.put(e.getKey(), e.getValue());
+			  escribir(utilMap);
+			}
+		}
 	}
 
 	public Map<String, String> leer() {

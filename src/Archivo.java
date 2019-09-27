@@ -52,9 +52,15 @@ public class Archivo implements AccesoDatos {
 			fr = new FileReader(archivo);
 			br = new BufferedReader(fr);
 			// Lectura del fichero
-			String linea;
-			while ((linea = br.readLine()) != null)
+			String linea = "";
+			while ((linea = br.readLine()) != null) {
+				auxiliar.put("ID", linea);
+				auxiliar.put("Nombre", linea);
+				auxiliar.put("Raza", linea);
+				auxiliar.put("Color", linea);
 				System.out.println(linea);
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

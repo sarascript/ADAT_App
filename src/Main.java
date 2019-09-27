@@ -47,18 +47,22 @@ public class Main {
 			break;
 		case "4":
 			Map<String, String> auxiliar4 = new HashMap<>();
-			
+			Scanner scanner1 = new Scanner(System.in);
+			System.out.println("Introduzca el ID");
+			auxiliar4.put("ID", scanner1.nextLine());
+			System.out.println("Introduzca el Nombre");
+			auxiliar4.put("Nombre", scanner1.nextLine());
+			System.out.println("Introduzca la Raza");
+			auxiliar4.put("Raza", scanner1.nextLine());
+			System.out.println("Introduzca el Color");
+			auxiliar4.put("Color", scanner1.nextLine());
 			miBBDD.escribir(auxiliar4);
 			break;
 		case "5":
-			Map<String, String> auxiliar5 = new HashMap<>();
-			miBBDD.leer();
-			miArchivo.escribir(auxiliar5);
+			miArchivo.escribir(miBBDD.leer());
 			break;
 		case "6":
-			Map<String, String> auxiliar6 = new HashMap<>();
-			miArchivo.leer();
-			miBBDD.escribir(auxiliar6);
+			miBBDD.escribirTodos(miArchivo.leer());
 			break;
 		}
 

@@ -34,3 +34,21 @@ Persa
 Negro
 ######
 
+7
+Posa
+Persa
+Gris
+######
+
+8
+Kaly
+Persa
+Blanco
+######
+
+9
+Pepa
+Persa
+Gris
+######
+
